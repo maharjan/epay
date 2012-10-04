@@ -12,8 +12,8 @@
 		<div>
 		<div id="headerPanel">
 			<div id="subHeaderPanel">
-				<!-- <a href="<?php echo base_url() ?>"><img
+				<a href="<?php echo base_url() ?>"><img
 				src="<?php echo base_url() ?>images/esewa.png" class="logo"
-				title="eSewa ePay"> </a> -->
+				title="eSewa ePay"> </a>
 			</div>
 		</div>

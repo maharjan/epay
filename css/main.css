@@ -169,8 +169,13 @@ input {
 
 #subHeaderPanel {
 	margin: 10px 0;
-	height: 60px;
+	height: 80px;
 	width: 100%;
+}
+
+#subHeaderPanel .logo {
+	padding:0;
+	margin: 10px 0;
 }
 
 /* Footer content styles */

@@ -2,9 +2,9 @@
 
 <div id="innerMainContainer">
 	<div id=inner_panel>
-		<h1>ePay checkout to $redirectURL</h1>
+		<h1>ePay checkout to <strong><em><?php echo $form_action; ?></strong></em></h1>
 
-		<?php echo form_open('http://localhost:8081/epay/service')
+		<?php echo form_open($form_action)
 		?>
 		<p>
 			<?php
