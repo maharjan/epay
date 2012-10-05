@@ -10,7 +10,7 @@
 			<?php
 			echo form_label("Amount :", 'amt');
 
-			$amount = array('name' => 'amt', 'id' => 'amount', 'type' => 'text', 'maxlength' => '10', 'placeholder' => '150', 'value' => set_value('amt'));
+			$amount = array('name' => 'amt', 'id' => 'amount', 'type' => 'text', 'maxlength' => '10', 'placeholder' => '150', 'value' => '80', 'required'=>'required');
 			echo form_input($amount);
 			echo form_error('amt', '<div class="error">', '</div>');
 			?>
@@ -19,7 +19,7 @@
 			<?php
 			echo form_label("Tax Amount :", 'txAmt');
 
-			$tax_amount = array('name' => 'txAmt', 'id' => 'txAmt', 'type' => 'text', 'maxlength' => '10', 'placeholder' => '10', 'value' => set_value('txAmt'));
+			$tax_amount = array('name' => 'txAmt', 'id' => 'txAmt', 'type' => 'text', 'maxlength' => '10', 'placeholder' => '10', 'value' => '10', 'required'=>'required');
 			echo form_input($tax_amount);
 			echo form_error('txAmt', '<div class="error">', '</div>');
 			?>
@@ -28,7 +28,7 @@
 			<?php
 			echo form_label("Product Service Charge :", 'psc');
 
-			$service_charge = array('name' => 'psc', 'id' => 'psc', 'type' => 'text', 'maxlength' => '10', 'placeholder' => '5', 'value' => set_value('psc'));
+			$service_charge = array('name' => 'psc', 'id' => 'psc', 'type' => 'text', 'maxlength' => '10', 'placeholder' => '5', 'value' => '5', 'required'=>'required');
 			echo form_input($service_charge);
 			echo form_error('psc', '<div class="error">', '</div>');
 			?>
@@ -37,7 +37,7 @@
 			<?php
 			echo form_label("Product Delivery Charge :", 'pdc');
 
-			$delivery_charge = array('name' => 'pdc', 'id' => 'pdc', 'type' => 'text', 'maxlength' => '32', 'placeholder' => '5', 'value' => set_value('pdc'));
+			$delivery_charge = array('name' => 'pdc', 'id' => 'pdc', 'type' => 'text', 'maxlength' => '32', 'placeholder' => '5', 'value' => '5', 'required'=>'required');
 			echo form_input($delivery_charge);
 			echo form_error('pdc', '<div class="error">', '</div>');
 			?>
@@ -46,7 +46,7 @@
 			<?php
 			echo form_label("Product ID :", 'pid');
 
-			$product_id = array('name' => 'pid', 'id' => 'pid', 'type' => 'text', 'maxlength' => '50', 'placeholder' => 'ABC-123-XYZ', 'value' => set_value('pid'));
+			$product_id = array('name' => 'pid', 'id' => 'pid', 'type' => 'text', 'maxlength' => '50', 'placeholder' => 'ABC-123-XYZ', 'value' => $curr_date, 'required'=>'required');
 			echo form_input($product_id);
 			echo form_error('pid', '<div class="error">', '</div>');
 			?>
