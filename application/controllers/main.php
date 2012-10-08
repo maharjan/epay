@@ -8,7 +8,8 @@ class Main extends CI_Controller {
 		parent::__construct();
 
 		$this -> options['variables'] = array('' => '-- Select --', '1' => 'New Api | (localhost:8081/epay/service)', '2' => 'New Api | (localhost:8081/epay/verify) : Verification ', '3' => 'New Api | (esewaincubator.f1soft.com.np/epay/service)', 
-		'4' => 'New Api | (esewaincubator.f1soft.com.np/epay/verify) : Verification ', '5' => 'Old Api | (localhost:8081/epay/main)', '6' => 'Old Api | (localhost:8081/epay/transrec) : Verification', '7' => 'Old Api | (esewaincubator.f1soft.com.np/epay/main)', '8' => 'Old Api | (esewaincubator.f1soft.com.np/epay/transrec) : Verification ');
+		'4' => 'New Api | (esewaincubator.f1soft.com.np/epay/verify) : Verification ', '5' => 'Old Api | (localhost:8081/epay/main)', '6' => 'Old Api | (localhost:8081/epay/transrec) : Verification', '7' => 'Old Api | (esewaincubator.f1soft.com.np/epay/main)', '8' => 'Old Api | (esewaincubator.f1soft.com.np/epay/transrec) : Verification ',
+		'9'=>'F1dev Api | (esewa.f1dev.com)', '10'=>'F1dev Api | (esewa.f1dev.com) : Verification');
 
 		$this -> load -> vars($this -> options);
 	}
@@ -24,7 +25,8 @@ class Main extends CI_Controller {
 		} else {
 			$this -> load -> helper('date');
 
-			$compartor = array('1' => 'http://localhost:8081/epay/service', '2' => 'http://localhost:8081/epay/verify', '3' => 'http://esewaincubator.f1soft.com.np/epay/service', '4' => 'http://esewaincubator.f1soft.com.np/epay/verify', '5' => 'http://localhost:8081/epay/main', '6' => 'http://localhost:8081/epay/transrec', '7' => 'http://esewaincubator.f1soft.com.np/epay/main', '8' => 'http://esewaincubator.f1soft.com.np/epay/transrec');
+			$compartor = array('1' => 'http://localhost:8081/epay/service', '2' => 'http://localhost:8081/epay/verify', '3' => 'http://esewaincubator.f1soft.com.np/epay/service', '4' => 'http://esewaincubator.f1soft.com.np/epay/verify', '5' => 'http://localhost:8081/epay/main', '6' => 'http://localhost:8081/epay/transrec', '7' => 'http://esewaincubator.f1soft.com.np/epay/main', '8' => 'http://esewaincubator.f1soft.com.np/epay/transrec',
+			'9'=>'http://esewa.f1dev.com/epay/main','10'=>'http://esewa.f1dev.com/epay/transrec');
 
 			$data = $this -> input -> post('urls');
 
@@ -37,9 +39,9 @@ class Main extends CI_Controller {
 				$this -> new_api($form_data);
 			} else if ($data == 2 || $data == 4) {
 				$this -> new_verification_api($form_data);
-			} else if ($data == 5 || $data == 7) {
+			} else if ($data == 5 || $data == 7 || $data ==9) {
 				$this -> old_api($form_data);
-			} else if ($data == 6 || $data == 8) {
+			} else if ($data == 6 || $data == 8 || $data ==10) {
 				$this -> old_verification_api($form_data);
 			}
 		}
